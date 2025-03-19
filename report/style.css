@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #09122c;
 }
 
@@ -6,6 +8,34 @@ body {
   color: #eee;
 }
 
-input {
-  background-color: #09122c;
+.link {
+  padding: 5px;
+  text-decoration: none;
+  border: 2px solid #eee;
+  border-radius: 5px;
 }
+
+li {
+  list-style-type: none;
+}
+
+.navigation { 
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #132866;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  height: auto;
+}
+
