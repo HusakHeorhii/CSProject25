@@ -92,6 +92,7 @@ janStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in janStats]
 daily_ranks = [item[1] for item in janStats]
 daily_ranks.reverse()
+print(song_names)
 
 #creates a pie chart of equal proportions in a clockwise direcion with a black border, with a legend attached; shows the chart
 plt.figure(figsize=(10, 10))
@@ -132,6 +133,7 @@ febStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in febStats]
 daily_ranks = [item[1] for item in febStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -172,6 +174,7 @@ marStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in marStats]
 daily_ranks = [item[1] for item in marStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -210,6 +213,7 @@ aprStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in aprStats]
 daily_ranks = [item[1] for item in aprStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -246,6 +250,7 @@ mayStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in mayStats]
 daily_ranks = [item[1] for item in mayStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -283,6 +288,7 @@ junStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in junStats]
 daily_ranks = [item[1] for item in junStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -320,6 +326,7 @@ julStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in julStats]
 daily_ranks = [item[1] for item in julStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -358,6 +365,7 @@ augStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in augStats]
 daily_ranks = [item[1] for item in augStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -396,6 +404,7 @@ sepStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in sepStats]
 daily_ranks = [item[1] for item in sepStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -434,7 +443,7 @@ octStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in octStats]
 daily_ranks = [item[1] for item in octStats]
 daily_ranks.reverse()
-
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -473,7 +482,7 @@ novStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in novStats]
 daily_ranks = [item[1] for item in novStats]
 daily_ranks.reverse()
-
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
@@ -512,6 +521,7 @@ decStats.sort(key=lambda x: x[1])
 song_names = [item[0] for item in decStats]
 daily_ranks = [item[1] for item in decStats]
 daily_ranks.reverse()
+print(song_names)
 
 plt.figure(figsize=(10, 10))
 plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
