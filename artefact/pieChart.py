@@ -1,14 +1,9 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("top50_spotify_songs_IE.csv")
 
-#dates = df["snapshot_date"].unique()
-
 months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-
-#songs = df["name"].unique()
-
-song_popularity = df.groupby("name")["daily_rank"].sum()
 
 df['snapshot_date'] = pd.to_datetime(df['snapshot_date'], dayfirst = True)
 
@@ -30,36 +25,77 @@ df11 = monthly_dfs[11]
 df12 = monthly_dfs[12]
 
 janSongs = df1["name"].unique()
+janStats = []
+
+febSongs = df2["name"].unique()
+febStats = []
+
+marSongs = df3["name"].unique()
+marStats = []
+
+aprSongs = df4["name"].unique()
+aprStats = []
+
+maySongs = df5["name"].unique()
+mayStats = []
+
+junSongs = df6["name"].unique()
+junStats = []
+
+julSongs = df7["name"].unique()
+julStats = []
+
+augSongs = df8["name"].unique()
+augStats = []
+
+sepSongs = df9["name"].unique()
+sepStats = []
+
+octSongs = df10["name"].unique()
+octStats = []
+
+novSongs = df11["name"].unique()
+novStats = []
+
+decSongs = df12["name"].unique()
+decStats = []
+
+#
 
 for x in df1.index:
     if df1.loc[x, "name"] in janSongs:
         count = (df1["name"] == df1.loc[x, "name"]).sum()
-        print(f"""{df.loc[x, "name"]} - {count}""")
-        janSongs.drop(df1.loc[x, "name"], axis=0)
+        janStats.append([df.loc[x, "name"], int(count)])
+        janSongs = janSongs[janSongs != df1.loc[x, "name"]]
 
-#for song, total in song_popularity.items():
-#    print(f"{song} - {total}")
+janStats.sort(key=lambda x: x[1], reverse=True)
 
-#for i in range(len(dates)-1):
-#    month = (pd.Timestamp(dates[i])).month
-#    if month in months:
-#        continue
-#    else:
-#        months.append(month)
+for i in range(len(janStats)-1,-1,-1):
+    if janStats[i][1] < janStats[0][1]:
+        janStats.pop(i)
 
-#print(months)
+for sublist in janStats:
+    song = sublist[0]
+    song_sum = df1[df1['name'] == song]['daily_rank'].sum()
+    sublist[1] = int(song_sum)
+    
+janStats.sort(key=lambda x: x[1])
 
-#print(dates)
+janStats = janStats[:10]
 
-#print(len(songs))
-#print(songs)
+song_names = [item[0] for item in janStats]
+daily_ranks = [item[1] for item in janStats]
+print(daily_ranks)
+daily_ranks.reverse()
+print(daily_ranks)
 
+plt.figure(figsize=(10, 10))
+plt.pie(daily_ranks, autopct='%1.1f%%', startangle=90, counterclock=False, wedgeprops={'edgecolor': 'black', 'linewidth': 1})
 
+plt.legend(song_names, title="Songs", loc="lower left", bbox_to_anchor=(-0.18, -0.15))
 
-#rate = []
+plt.axis('equal')
 
-#for i in df.index:
-#   if df["name"] in rate:
+plt.title("10 Popular Songs of January in Ireland")
 
-
-        
+plt.show()
